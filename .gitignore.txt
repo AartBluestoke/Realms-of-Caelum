@@ -1,4 +1,0 @@
-# Basically this just removes the Documentation folder, since it
-# can be viewed at the downloads section.
-
-Documentation\Official Manual.rtf

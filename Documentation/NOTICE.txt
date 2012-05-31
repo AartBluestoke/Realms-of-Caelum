@@ -1,5 +1,0 @@
-Due to GitHub's annoying .gitignore protocol, please download the documentation instead of viewing it here.
-
-Thank you,
-
-	-Elusivehawk

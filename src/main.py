@@ -1,7 +1,7 @@
 '''
 Created on Oct 22, 2012
 
-@author: zeb
+@author: ObsequiousNewt
 '''
 
 import direct.directbase.DirectStart
@@ -10,7 +10,7 @@ import panda3d.core as p3
 
 class window:
 	def __init__(self):
-		self.title=dg.OnscreenText(text = "REALMS of C\xc3\x86",
+		self.title=dg.OnscreenText(text = "REALMS of C\xc3\x86lum",
 								   style = 1,
 								   fg = (1, 1, 1, 1),
 								   pos = (0.8,-0.95),

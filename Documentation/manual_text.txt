@@ -1,0 +1,203 @@
+﻿Realms of Cælum Official Manual
+
+
+
+Table of Contents
+
+1. Introduction
+2. Controls
+3. Basic Mechanics
+4. Terrain and Structures
+5. Mining
+6. Coming Soon
+7. Coming Soon
+8. Coming Soon
+9. Coming Soon
+10. Staff
+
+
+
+
+
+1. Introduction
+
+Realms of Cælum is an upcoming Indie game that will mainly feature a Fantasy theme with Sandbox elements.
+
+
+Statistics:
+
+Language: Python*
+Engine: Panda3D*
+Platform(s): Everything
+Release Date: May 24th, 2013**
+Theme: Fantasy/Sandbox
+Created by: Refer to "10. Staff"
+Distributed by: Elusivehawk, LLC.***
+
+
+*Probably not subject to change.
+**Definitely subject to change; roughly the 1 year anniversary of when this game was originally conceptualized.
+***Not an actual company, yet.
+
+
+2. Controls
+
+These are the controls for Realms of Cælum.
+
+Remember: Nothing is set in stone yet. Also, controls will be adjustable.
+
+Forward: W
+Left: A
+Backwards: S
+Right: D
+Inventory: E
+Jump: Space
+Attack: Left Click
+Interact: Right Click
+Chat/Single Player Console: Enter
+Game Menu: Esc.
+
+
+3. Basic Mechanics
+
+The following is a list of basic mechanics.
+
+Health: The most important feature. It keeps you alive and can be used for certain spells.
+
+Stamina: Allows you to do stuff, including fight, craft, sprint and manage crops.
+
+Mana: Basically stamina for Mages.
+
+Levelling: Rewrite coming Soon™.
+
+Inventory: Information coming Soon™.
+
+Combat equation(s): Rewrite coming Soon™
+
+Other information: Coming soon, please refer to "Concepts.txt" for a list of purely WIP ideas.
+
+
+4. Races
+
+When the Player first starts up a new world, there will be 5 Races to choose from. Once a Race has been chosen, it can only be changed through certain NPCs.
+
+Starting Races include:
+
+Etkai (Water-based)
+Qoqq (Earth-based)
+Twaši (Fire-based)
+Davlë (Air-based)
+Kyndæ (Adaptable)
+
+Note: The Kyndæ (singular Kynda) are the most human-like race and our attempt to have a sort of “human” in the mix.
+
+More are coming Soon™.
+
+
+5. Terrain and Structures
+
+Terrain generation will mainly consist of a diamond-square algorithm which will then go through the coding equivalent of being rocket-strapped onto a String-based input system, as well as sliders for those who want X instead of Y.
+
+As for whether terrain will be infinite or not, terrain will be finite, but wrap around, allowing for an Earth-like world.
+
+Structures (Most of which will be optional) include:
+
+Weather
+Volcanoes
+Forests
+Mountain Ranges
+Rivers, Lakes, Oceans
+Tundra
+Castles
+Floating Castles
+Caves
+Plains
+
+And more coming soon as features are discussed.
+
+
+6. Mining
+
+The plans for mining are still unfinished, however, the basic nutshell of it is:
+
+Mining isn't required early on.
+
+Mining will be required for higher end equipment.
+
+You'll be able to find crystals.
+
+Moreover, mining is not the primary focus of the game. This game is meant to be malleable, which means you can change the ground, but it's not all you do.
+
+List of Ores*:
+
+Copper
+Tin
+Iron
+Coal
+"Runestone**"
+Gold
+Silver
+Gems (Amethyst, Emerald, Diamond***, Ruby, Sapphire, Topaz)
+Sodium
+Lead
+Sulphur
+Potassium
+Onyx
+Zinc
+
+List of Alloys*:
+
+Bronze
+Brass
+
+
+*Some of these are inspired by other games. ¡DON'T SUE US!
+[Note from Newt: This world and all if its components are entirely fictional. Why not just make stuff up?]
+
+**Name is definitely not official.
+
+***Note: NO. DIAMOND. TOOLS!!
+
+
+(7 through 9 skipped for now)
+
+
+10. Staff
+
+Currently, Codename FSG is being worked on by the following people:
+
+
+Elusivehawk (Project Leader, Coder, Fez-wearing Empoleon Fanatic)
+
+Rainfur (Project Co-Leader, Coder)
+
+ObsequiousNewt (Coder, Grammar Freak*)
+
+Atrain99 (Coder)
+
+S1D3W1ND3R (Steam only, Modeller, Voice Actor, Conlang Developer)
+
+andy_t_roo (Coding Consultant)
+
+gjjdac: (Steam only, Artist)
+
+MingusUnderdog (Steam only, Sound Director, Conlang Developer, Designer)
+
+Sothe Cuslinde (rsmrules05, Future Playtester)
+
+Polarbraveheart (Steam only, Future Playtester)
+
+Greenlinkwolf (Steam only, Future Playtester)
+
+
+
+More information, including contact information and how to apply for a position can be found at the temporary wiki at GitHub. 
+
+Note: For now, the wiki hasn't been fleshed out, so for now just contact the Project Leader at:
+
+Email: be_the_trade@yahoo.com
+Steam: Some Random Pokemon
+Minecraft Forums: Elusivehawk
+
+*Be forewarned.
+Copyright © 2012 Jeff "Elusivehawk" Brusse and Erik "Rainfur" Melton, All Rights Reserved.

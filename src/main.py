@@ -10,7 +10,7 @@ import panda3d.core as p3
 
 class window:
 	def __init__(self):
-		self.title=dg.OnscreenText(text = "REALMS of C\xc3\x86lum",
+		self.title=dg.OnscreenText(text = "Realms of C\xc3\x86lum",
 								   style = 1,
 								   fg = (1, 1, 1, 1),
 								   pos = (0.8,-0.95),

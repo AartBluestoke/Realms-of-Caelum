@@ -4,22 +4,23 @@ Created on Oct 22, 2012
 @author: ObsequiousNewt
 '''
 
-import direct.directbase.DirectStart
+import direct.showbase as ds
 import direct.gui.DirectGui as dg
 import panda3d.core as p3
 
-class window:
+import gui
+
+class window(ds.ShowBase):
 	def __init__(self):
-		self.title=dg.OnscreenText(text = "Realms of C\xc3\x86lum",
-								   style = 1,
-								   fg = (1, 1, 1, 1),
-								   pos = (0.8,-0.95),
-								   scale = .07)
+        ds.ShowBase.__init__(self)
 		base.setBackgroundColor(0, 0, 0)
 		base.disableMouse()
 		camera.setPos(0,0,45)
 		camera.setHpr(0,-90,0)
-		
-win=window()
 
-run()
+		#Initialize menu
+		self.menu_main = gui.main(self)
+		self.menu_options = gui.options(self)
+        
+win=window()
+win.run()

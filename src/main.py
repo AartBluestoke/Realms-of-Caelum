@@ -23,7 +23,7 @@ class window(ds.ShowBase):
 		#Initialize menu
 		self.menu_main = gui.main(self)
 		self.menu_options = gui.options(self)
-
+		
 		self.openmain()
 	
 	def hide_menus(self):
@@ -41,5 +41,6 @@ class window(ds.ShowBase):
 	def new_game(self):
 		pass #We will get to this... *much* later.
         
+
 win=window()
 win.run()

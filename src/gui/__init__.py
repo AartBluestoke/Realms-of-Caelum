@@ -27,8 +27,7 @@ class main(base):
 					       text = ("Options"),
 					       pos = (-1,0,0.6),
 					       scale = .05,
-					       command = win.openoptions
-					       )
+					       command = win.openoptions)
 
 class options(base):
 

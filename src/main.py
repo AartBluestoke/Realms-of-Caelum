@@ -1,7 +1,9 @@
 '''
-Created on Oct 22, 2012
+This is *not* the documentation you're looking for.
 
-@author: ObsequiousNewt
+Look in the Documentation folder for documentation.
+
+Move along!
 '''
 
 import direct.showbase.ShowBase as ds
@@ -20,7 +22,24 @@ class window(ds.ShowBase):
 
 		#Initialize menu
 		self.menu_main = gui.main(self)
-##		self.menu_options = gui.options(self)
+		self.menu_options = gui.options(self)
+
+		self.openmain()
+	
+	def hide_menus(self):
+		self.menu_main.hide()
+		self.menu_options.hide()
+		
+	def openmain(self):
+		self.hide_menus()
+		self.menu_main.show()
+
+	def openoptions(self):
+		self.hide_menus()
+		self.menu_options.show()
+
+	def new_game(self):
+		pass #We will get to this... *much* later.
         
 win=window()
 win.run()

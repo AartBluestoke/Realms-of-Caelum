@@ -1,4 +1,4 @@
-ÔªøRealms of C√¶lum Official Manual
+Realms of CÊlum Official Manual
 
 
 
@@ -21,7 +21,7 @@ Table of Contents
 
 1. Introduction
 
-Realms of C√¶lum is an upcoming Indie game that will mainly feature a Fantasy theme with Sandbox elements.
+Realms of CÊlum is an upcoming Indie game that will mainly feature a Fantasy theme with Sandbox elements.
 
 
 Statistics:
@@ -42,7 +42,7 @@ Distributed by: Elusivehawk, LLC.***
 
 2. Controls
 
-These are the controls for Realms of C√¶lum.
+These are the controls for Realms of CÊlum.
 
 Remember: Nothing is set in stone yet. Also, controls will be adjustable.
 
@@ -68,11 +68,11 @@ Stamina: Allows you to do stuff, including fight, craft, sprint and manage crops
 
 Mana: Basically stamina for Mages.
 
-Levelling: Rewrite coming Soon‚Ñ¢.
+Levelling: Rewrite coming Soonô.
 
-Inventory: Information coming Soon‚Ñ¢.
+Inventory: Information coming Soonô.
 
-Combat equation(s): Rewrite coming Soon‚Ñ¢
+Combat equation(s): Rewrite coming Soonô
 
 Other information: Coming soon, please refer to "Concepts.txt" for a list of purely WIP ideas.
 
@@ -85,13 +85,13 @@ Starting Races include:
 
 Etkai (Water-based)
 Qoqq (Earth-based)
-Twa≈°i (Fire-based)
-Davl√´ (Air-based)
-Kynd√¶ (Adaptable)
+Twaöi (Fire-based)
+DavlÎ (Air-based)
+KyndÊ (Adaptable)
 
-Note: The Kynd√¶ (singular Kynda) are the most human-like race and our attempt to have a sort of ‚Äúhuman‚Äù in the mix.
+Note: The KyndÊ (singular Kynda) are the most human-like race and our attempt to have a sort of ìhumanî in the mix.
 
-More are coming Soon‚Ñ¢.
+More are coming Soonô.
 
 
 5. Terrain and Structures
@@ -130,33 +130,8 @@ Moreover, mining is not the primary focus of the game. This game is meant to be 
 
 List of Ores*:
 
-Copper
-Tin
-Iron
-Coal
-"Runestone**"
-Gold
-Silver
-Gems (Amethyst, Emerald, Diamond***, Ruby, Sapphire, Topaz)
-Sodium
-Lead
-Sulphur
-Potassium
-Onyx
-Zinc
-
-List of Alloys*:
-
-Bronze
-Brass
-
-
-*Some of these are inspired by other games. ¬°DON'T SUE US!
 [Note from Newt: This world and all if its components are entirely fictional. Why not just make stuff up?]
-
-**Name is definitely not official.
-
-***Note: NO. DIAMOND. TOOLS!!
+[Note from Hawk: Shazam! We have no ores!]
 
 
 (7 through 9 skipped for now)
@@ -181,6 +156,8 @@ andy_t_roo (Coding Consultant)
 
 gjjdac: (Steam only, Artist)
 
+lorien4 (Artist)
+
 MingusUnderdog (Steam only, Sound Director, Conlang Developer, Designer)
 
 Sothe Cuslinde (rsmrules05, Future Playtester)
@@ -200,4 +177,4 @@ Steam: Some Random Pokemon
 Minecraft Forums: Elusivehawk
 
 *Be forewarned.
-Copyright ¬© 2012 Jeff "Elusivehawk" Brusse and Erik "Rainfur" Melton, All Rights Reserved.
+Copyright © 2012 Jeff "Elusivehawk" Brusse and Erik "Rainfur" Melton, All Rights Reserved.

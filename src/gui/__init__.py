@@ -20,26 +20,48 @@ class base:
 		self.frame.show()
 
 class main(base):
-
+        
 	def __init__(self,win):
 		base.__init__(self,win)
-		self.new = dg.DirectButton(parent = self.frame,
+		self.newgame = dg.DirectButton(parent = self.frame,
 					   text = ("New Game"), #TODO! Let's add support for languages early, so we don't have to deal with that later when it'll be harder.
-					   pos = (0,0,0.8),
+					   pos = (0,0,-0.2),
 					   scale = buttonsize,
-					   command = win.new_game)
+					   command = win.opennewgame)
 		self.options = dg.DirectButton(parent = self.frame,
 					       text = ("Options"),
-					       pos = (0,0,0.6),
+					       pos = (0,0,-0.4),
 					       scale = buttonsize,
 					       command = win.openoptions)
 
 class options(base):
-
+        
 	def __init__(self,win):
 		base.__init__(self,win)
+		self.musicVolume = dg.DirectSlider(parent = self.frame,
+                                                   pos = (0,0,-0.4),
+                                                   scale = 0.4,
+                                                   value = 0.6,
+                                                   command = win.setmusicvolume)
 		self.back = dg.DirectButton(parent = self.frame,
                                             text = ("Back"),
                                             pos = (0,0,-0.8),
                                             scale = buttonsize,
                                             command = win.openmain)
+
+class newgame(base):
+        
+        def __init__(self,win):
+                base.__init__(self,win)
+                self.createNew = dg.DirectButton(parent = self.frame,
+                                                 text = ("New"),
+                                                 pos = (-0.2,0,-0.7),
+                                                 scale = buttonsize,
+                                                 command = win.createworld)
+                self.back = dg.DirectButton(parent = self.frame,
+                                            text = ("Back"),
+                                            pos = (0.15,0,-0.7),
+                                            scale = buttonsize,
+                                            command = win.openmain)
+
+

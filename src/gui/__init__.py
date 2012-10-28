@@ -23,14 +23,19 @@ class main(base):
         
 	def __init__(self,win):
 		base.__init__(self,win)
-		self.newgame = dg.DirectButton(parent = self.frame,
-					   text = ("New Game"), #TODO! Let's add support for languages early, so we don't have to deal with that later when it'll be harder.
+		self.loadgame = dg.DirectButton(parent = self.frame,
+					   text = ("Load Game"), #TODO! Let's add support for languages early, so we don't have to deal with that later when it'll be harder.
 					   pos = (0,0,-0.2),
 					   scale = buttonsize,
-					   command = win.opennewgame)
+					   command = win.openloadgame)
+		self.playonline = dg.DirectButton(parent = self.frame,
+					       text = ("Play Online"),
+					       pos = (0,0,-0.4),
+					       scale = buttonsize,
+					       command = win.openoptions)
 		self.options = dg.DirectButton(parent = self.frame,
 					       text = ("Options"),
-					       pos = (0,0,-0.4),
+					       pos = (0,0,-0.6),
 					       scale = buttonsize,
 					       command = win.openoptions)
 
@@ -49,7 +54,7 @@ class options(base):
                                             scale = buttonsize,
                                             command = win.openmain)
 
-class newgame(base):
+class loadgame(base):
         
         def __init__(self,win):
                 base.__init__(self,win)
@@ -64,4 +69,8 @@ class newgame(base):
                                             scale = buttonsize,
                                             command = win.openmain)
 
+class playonline(base):
 
+        def __init__(self,win):
+                base.__init__(self,win)
+                

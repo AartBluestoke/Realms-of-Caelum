@@ -25,8 +25,9 @@ class window(ds.ShowBase):
                 
 		#Initialize menu
 		self.menu_main = gui.main(self)
+		self.menu_loadgame = gui.loadgame(self)
+		self.menu_playonline = gui.playonline(self)
 		self.menu_options = gui.options(self)
-		self.menu_newgame = gui.newgame(self)
                 self.bgmusic = base.loader.loadSfx("resources/sounds/Climactic cave.mp3")
 		self.title = dg.OnscreenText(text = "Realms of Caelum",
                                              style = 3,
@@ -37,13 +38,15 @@ class window(ds.ShowBase):
                 print "Done!"
 		
 		self.openmain()
+		self.bgmusic.setLoop(True)
 		self.bgmusic.play()
 
 	def hide_menus(self):
 		'''Hides any active menus. Called before switching menus.'''
 		self.menu_main.hide()
+		self.menu_loadgame.hide()
+		self.menu_playonline.hide()
 		self.menu_options.hide()
-		self.menu_newgame.hide()
 
 	def openmain(self):
 		'''Opens the main menu.'''
@@ -55,11 +58,14 @@ class window(ds.ShowBase):
 		self.hide_menus()
 		self.menu_options.show()
 
-	def opennewgame(self):
-		'''Opens the new-game menu.'''
+	def openloadgame(self):
+		'''Opens the load game menu.'''
 		self.hide_menus()
-		self.menu_newgame.show()
-		#TODO Finish Eventually(TM).
+		self.menu_loadgame.show()
+
+        def openplayonline(self):
+                self.hide_menus()
+                slef.menu_playonline.show()
 
 	def setmusicvolume(self):
                 self.bgmusic.setVolume(self.menu_options.musicVolume['value'])

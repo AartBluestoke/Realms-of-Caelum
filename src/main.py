@@ -28,12 +28,18 @@ class window(ds.ShowBase):
 		self.menu_loadgame = gui.loadgame(self)
 		self.menu_playonline = gui.playonline(self)
 		self.menu_options = gui.options(self)
+		self.menu_newworld = gui.makenewworld(self)
                 self.bgmusic = base.loader.loadSfx("resources/sounds/Climactic cave.mp3")
 		self.title = dg.OnscreenText(text = "Realms of Caelum",
                                              style = 3,
                                              fg = (1, 1, 1, 1),
                                              pos = (0,0.75,0),
                                              scale = 0.3)
+                self.copyright = dg.OnscreenText(text = "(C) Copyright 2012 Elusivehawk, LLC., All Rights Reserved",
+                                             style = 3,
+                                             fg = (1, 1, 1, 1),
+                                             pos = (-0.66,-0.95,0),
+                                             scale = 0.05)
                 
                 print "Done!"
 		
@@ -47,6 +53,7 @@ class window(ds.ShowBase):
 		self.menu_loadgame.hide()
 		self.menu_playonline.hide()
 		self.menu_options.hide()
+		self.menu_newworld.hide()
 
 	def openmain(self):
 		'''Opens the main menu.'''
@@ -65,13 +72,18 @@ class window(ds.ShowBase):
 
         def openplayonline(self):
                 self.hide_menus()
-                slef.menu_playonline.show()
+                self.menu_playonline.show()
 
 	def setmusicvolume(self):
                 self.bgmusic.setVolume(self.menu_options.musicVolume['value'])
 
-        def createworld(self):
-                print "This button will be activated Soon(TM)."
+        def opennewworld(self):
+                self.hide_menus()
+                self.menu_newworld.show()
+
+        def makenewworld(self,name):
+                #TODO Get ta work!
+                pass
 
 win=window()
 win.run()

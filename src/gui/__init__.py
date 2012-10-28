@@ -32,7 +32,7 @@ class main(base):
 					       text = ("Play Online"),
 					       pos = (0,0,-0.4),
 					       scale = buttonsize,
-					       command = win.openoptions)
+					       command = win.openplayonline)
 		self.options = dg.DirectButton(parent = self.frame,
 					       text = ("Options"),
 					       pos = (0,0,-0.6),
@@ -62,7 +62,7 @@ class loadgame(base):
                                                  text = ("New"),
                                                  pos = (-0.2,0,-0.7),
                                                  scale = buttonsize,
-                                                 command = win.createworld)
+                                                 command = win.opennewworld)
                 self.back = dg.DirectButton(parent = self.frame,
                                             text = ("Back"),
                                             pos = (0.15,0,-0.7),
@@ -73,4 +73,24 @@ class playonline(base):
 
         def __init__(self,win):
                 base.__init__(self,win)
-                
+                #TODO Add more buttons.
+                self.back = dg.DirectButton(parent = self.frame,
+                                            text = ("Back"),
+                                            pos = (0,0,-0.7),
+                                            scale = buttonsize,
+                                            command = win.openmain)
+
+class makenewworld(base):
+        def __init__(self,win):
+                base.__init__(self,win)
+                self.cancel = dg.DirectButton(parent = self.frame,
+                                              text = ("Cancel"),
+                                              pos = (0,0,-0.7),
+                                              scale = buttonsize,
+                                              command = win.openloadgame)
+                #self.worldname = dg.DirectEntry(initialText = ("World Name"),
+                #                                pos = (0,0,0),
+                #                                width = 2,
+                #                                numLines = 1,
+                #                                command = win.makenewworld)
+

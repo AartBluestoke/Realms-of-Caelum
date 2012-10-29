@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 '''
 This is *not* the documentation you're looking for.
 
@@ -11,12 +12,13 @@ import direct.gui.DirectGui as dg
 import panda3d.core as p3
 
 import gui
+from lang import lang
 
 class window(ds.ShowBase):
 	'''Main window class, instantiated upon start of game. This class
 	starts the menu.'''
 	def __init__(self):
-		print 'Booting up game...',
+		print lang('stdout.boot')
 		ds.ShowBase.__init__(self)
 		base.setBackgroundColor(0, 0, 0)
 		base.disableMouse()
@@ -33,17 +35,17 @@ class window(ds.ShowBase):
 		self.bgmusic = base.loader.loadSfx('resources/sounds/Climactic cave.mp3')
 		
 		self.title = dg.OnscreenText(parent = self.menu_main.frame,
-					text = u'Realms of C\xe6lum',
+					text = lang('gui.title'),
 					style = 3,
 					fg = (1, 1, 1, 1),
 					pos = (0,0.75,0),
 					scale = 0.3)
-                self.copyright = dg.OnscreenText(text = u'\xa9 Copyright 2012 Elusivehawk, LLC. and Pentachoron Labs, All Rights Reserved',
+                self.copyright = dg.OnscreenText(text = lang('gui.copyright'),
 						 style = 3,
 						 fg = (1, 1, 1, 1),
 						 pos = (-0.45,-0.95,0),
 						 scale = 0.05)
-		print 'Done!'
+		print lang('stdout.bootdone')
 		self.openmain()
 		self.bgmusic.setLoop(True)
 		self.bgmusic.play()

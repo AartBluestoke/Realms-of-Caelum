@@ -24,20 +24,24 @@ class window(ds.ShowBase):
 		camera.setHpr(0,-90,0)
 		#Initialize menu
 		self.menu_main = gui.main(self)
-		self.menu_loadgame = gui.loadgame(self)
-		self.menu_playonline = gui.playonline(self)
+		self.menu_story = gui.storymode(self)
+		self.menu_freeplay = gui.freeplay(self)
 		self.menu_options = gui.options(self)
 		self.menu_newworld = gui.makenewworld(self)
+
+		#Starts up title music.
 		self.bgmusic = base.loader.loadSfx('resources/sounds/Climactic cave.mp3')
-		self.title = dg.OnscreenText(text = u'Realms of C\xe6lum',
-					     style = 3,
-					     fg = (1, 1, 1, 1),
-					     pos = (0,0.75,0),
-					     scale = 0.3)
+		
+		self.title = dg.OnscreenText(parent = self.menu_main.frame,
+					text = u'Realms of C\xe6lum',
+					style = 3,
+					fg = (1, 1, 1, 1),
+					pos = (0,0.75,0),
+					scale = 0.3)
                 self.copyright = dg.OnscreenText(text = u'\xa9 Copyright 2012 Elusivehawk, LLC. and Pentachoron Labs, All Rights Reserved',
 						 style = 3,
 						 fg = (1, 1, 1, 1),
-						 pos = (-0.66,-0.95,0),
+						 pos = (-0.45,-0.95,0),
 						 scale = 0.05)
 		print 'Done!'
 		self.openmain()
@@ -47,8 +51,8 @@ class window(ds.ShowBase):
 	def hide_menus(self):
 		'''Hides any active menus. Called before switching menus.'''
 		self.menu_main.hide()
-		self.menu_loadgame.hide()
-		self.menu_playonline.hide()
+		self.menu_story.hide()
+		self.menu_freeplay.hide()
 		self.menu_options.hide()
 		self.menu_newworld.hide()
 
@@ -62,15 +66,15 @@ class window(ds.ShowBase):
 		self.hide_menus()
 		self.menu_options.show()
 
-	def openloadgame(self):
+	def openstorymode(self):
 		'''Opens the load game menu.'''
 		self.hide_menus()
-		self.menu_loadgame.show()
+		self.menu_story.show()
 
-	def openplayonline(self):
+	def openfreeplay(self):
 		'''Opens the play-online menu.'''
 		self.hide_menus()
-		self.menu_playonline.show()
+		self.menu_freeplay.show()
 
 	def setmusicvolume(self):
 		'''Sets the music volume.'''
@@ -81,7 +85,7 @@ class window(ds.ShowBase):
 		self.hide_menus()
 		self.menu_newworld.show()
 
-	def makenewworld(self,name):
+	def makenewworld(self):
 		'''Creates a new world.'''
 		#TODO Get ta work!
 		pass

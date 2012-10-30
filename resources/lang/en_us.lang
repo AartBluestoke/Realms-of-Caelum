@@ -19,6 +19,8 @@ gui.button.story	Story
 
 gui.game.name	World Name
 
+gui.options.lang	Language
+
 #We may eliminate these. Don't translate these until we're sure we want these.
 stdout.boot	Booting up game…
 stdout.bootdone	Done!

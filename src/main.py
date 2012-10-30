@@ -12,6 +12,7 @@ import direct.gui.DirectGui as dg
 import panda3d.core as p3
 
 import gui
+import lang as lang_
 from lang import lang
 
 class window(ds.ShowBase):
@@ -91,6 +92,11 @@ class window(ds.ShowBase):
 		'''Creates a new world.'''
 		#TODO Get ta work!
 		pass
+
+	def selectlang(self,obj):
+		'''Selects a language.'''
+		lang_.curr = obj
+		#TODO Update DirectGui(somehow.)
 
 win=window()
 win.run()

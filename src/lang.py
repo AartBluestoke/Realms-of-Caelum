@@ -2,6 +2,8 @@
 
 langs = {}
 curr = 'en_us' #by default. TODO: load from a config. (TODO: write a config, but we can reuse some of this script.)
+supported = {	'en_us':'English (American)',
+		'la_cl':'Latin (Classical)'}
 
 def load(langname):
 	'''Loads a lang file.'''

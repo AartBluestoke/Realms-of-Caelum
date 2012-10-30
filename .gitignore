@@ -1,1 +1,3 @@
 *.pyc
+/RocLauncher/*
+!/RocLauncher/src/

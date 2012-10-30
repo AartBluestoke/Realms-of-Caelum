@@ -41,6 +41,19 @@ class main(base):
 						pos = (0,0,-0.6),
 						scale = buttonsize,
 						command = win.openoptions)
+		self.title = dg.OnscreenText(parent = self.frame,
+					text = lang('gui.title'),
+					style = 3,
+					fg = (1, 1, 1, 1),
+					pos = (0,0.75,0),
+					scale = 0.3)
+		self.copyright = dg.OnscreenText(parent = self.frame,
+						 text = lang('gui.copyright'),
+						 style = 3,
+						 fg = (1, 1, 1, 1),
+						 pos = (-0.45,-0.95,0),
+						 scale = 0.05)
+
 
 class options(base):
 	

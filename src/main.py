@@ -29,18 +29,6 @@ class window(ds.ShowBase):
 		self.createmenus()
 		#Starts up title music.
 		self.bgmusic = base.loader.loadSfx('resources/sounds/Climactic cave.mp3')
-		
-		self.title = dg.OnscreenText(parent = self.menu_main.frame,
-					text = lang('gui.title'),
-					style = 3,
-					fg = (1, 1, 1, 1),
-					pos = (0,0.75,0),
-					scale = 0.3)
-		self.copyright = dg.OnscreenText(text = lang('gui.copyright'),
-						 style = 3,
-						 fg = (1, 1, 1, 1),
-						 pos = (-0.45,-0.95,0),
-						 scale = 0.05)
 		print lang('stdout.bootdone')
 		self.openmain()
 		self.bgmusic.setLoop(True)
@@ -69,7 +57,8 @@ class window(ds.ShowBase):
 		self.menu_story = gui.storymode(self)
 		self.menu_freeplay = gui.freeplay(self)
 		self.menu_options = gui.options(self)
-		self.menu_newworld = gui.makenewworld(self)		
+		self.menu_newworld = gui.makenewworld(self)
+		self.hide_menus()
 
 	def openmain(self):
 		'''Opens the main menu.'''
@@ -107,8 +96,10 @@ class window(ds.ShowBase):
 
 	def selectlang(self,obj):
 		'''Selects a language.'''
-		lang_.curr = obj
+		if obj == 'Default': return
+		lang_.curr = lang_.supported[obj]
 		self.recreatemenus()
+		self.openoptions()
 
 win=window()
 win.run()

@@ -14,7 +14,7 @@ def load(langname):
 	while True:
 		y = x.readline()
 		if y == '': break
-        if y[:3] == '\xef\xbb\xbf': y = y[3:]
+		if y[:3] == '\xef\xbb\xbf': y = y[3:]
 		if (y[0] == '#') or (y[0] == '\n'): continue
 		if len(y.split('\t')) != 2:
 			print 'Error: Corrupted lang file %s. Contact developers!' %langname

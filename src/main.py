@@ -26,12 +26,7 @@ class window(ds.ShowBase):
 		camera.setPos(0,0,45)
 		camera.setHpr(0,-90,0)
 		#Initialize menu
-		self.menu_main = gui.main(self)
-		self.menu_story = gui.storymode(self)
-		self.menu_freeplay = gui.freeplay(self)
-		self.menu_options = gui.options(self)
-		self.menu_newworld = gui.makenewworld(self)
-
+		self.createmenus()
 		#Starts up title music.
 		self.bgmusic = base.loader.loadSfx('resources/sounds/Climactic cave.mp3')
 		
@@ -58,6 +53,23 @@ class window(ds.ShowBase):
 		self.menu_freeplay.hide()
 		self.menu_options.hide()
 		self.menu_newworld.hide()
+
+	def recreatemenus(self):
+		'''Destroys and recreates all menus.'''
+                self.menu_main.destroy()
+                self.menu_story.destroy()
+                self.menu_freeplay.destroy()
+                self.menu_options.destroy()
+                self.menu_newworld.destroy()
+                self.createmenus()
+
+        def createmenus(self):
+		'''Creates menus.'''
+		self.menu_main = gui.main(self)
+		self.menu_story = gui.storymode(self)
+		self.menu_freeplay = gui.freeplay(self)
+		self.menu_options = gui.options(self)
+		self.menu_newworld = gui.makenewworld(self)		
 
 	def openmain(self):
 		'''Opens the main menu.'''
@@ -96,7 +108,7 @@ class window(ds.ShowBase):
 	def selectlang(self,obj):
 		'''Selects a language.'''
 		lang_.curr = obj
-		#TODO Update DirectGui(somehow.)
+		self.recreatemenus()
 
 win=window()
 win.run()

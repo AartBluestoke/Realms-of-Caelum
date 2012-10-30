@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 '''This file contains all of the main-menu GUI classes. For in-game and special GUIs, please see respective files in this package.'''
 
 import direct.gui.DirectGui as dg
@@ -57,11 +58,11 @@ class options(base):
 						command = win.openmain)
 		self.lang = dg.DirectOptionMenu(parent = self.frame,
 						text = (lang('gui.options.lang')),
-                                                pos = (0,0,-0.1),
-                                                scale = buttonsize,
-                                                items = lang_.supported.values(),
-                                                initialitem = 0,
-                                                command = win.selectlang)
+						pos = (0,0,-0.1),
+						scale = buttonsize,
+						items = ['Default']+lang_.supported.keys(),
+						initialitem = 0,
+						command = win.selectlang)
 
 class storymode(base):
 
@@ -82,7 +83,7 @@ class freeplay(base):
 
 	def __init__(self,win):
 		base.__init__(self,win)
-        	#TODO Add more buttons.
+		#TODO Add more buttons.
 		self.back = dg.DirectButton(parent = self.frame,
 						text = (lang('gui.button.back')),
 						pos = (0,0,-0.7),

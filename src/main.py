@@ -36,7 +36,7 @@ class window(ds.ShowBase):
 					fg = (1, 1, 1, 1),
 					pos = (0,0.75,0),
 					scale = 0.3)
-                self.copyright = dg.OnscreenText(text = lang('gui.copyright'),
+		self.copyright = dg.OnscreenText(text = lang('gui.copyright'),
 						 style = 3,
 						 fg = (1, 1, 1, 1),
 						 pos = (-0.45,-0.95,0),
@@ -56,14 +56,14 @@ class window(ds.ShowBase):
 
 	def recreatemenus(self):
 		'''Destroys and recreates all menus.'''
-                self.menu_main.destroy()
-                self.menu_story.destroy()
-                self.menu_freeplay.destroy()
-                self.menu_options.destroy()
-                self.menu_newworld.destroy()
-                self.createmenus()
+		self.menu_main.frame.destroy()
+		self.menu_story.frame.destroy()
+		self.menu_freeplay.frame.destroy()
+		self.menu_options.frame.destroy()
+		self.menu_newworld.frame.destroy()
+		self.createmenus()
 
-        def createmenus(self):
+	def createmenus(self):
 		'''Creates menus.'''
 		self.menu_main = gui.main(self)
 		self.menu_story = gui.storymode(self)

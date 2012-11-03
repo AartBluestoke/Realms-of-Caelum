@@ -1,6 +1,5 @@
 # -*- coding: utf-8 -*-
 import random
-import odds
 
 def vowel():
 	r = random.random()
@@ -18,17 +17,6 @@ def ccl():
 	elif r < .85: return ['ps','bz','p\xc5\xa1','b\xc5\xbe','ts','dz','t\xc5\xa1','d\xc5\xbe','ks','gz','k\xc5\xa1','g\xc5\xbe'][int(random.random()*12)]
 	elif r < .90: return ['sp','zb','\xc5\xa1p','\xc5\xbeb','st','zd','\xc5\xa1t','\xc5\xbed','sk','zg','\xc5\xa1k','\xc5\xbeg'][int(random.random()*12)]
 	else: return '"'
-##	cons = ['p','b','t','d','k','g','f','v','\xc5\xa5','\xc4\x8f','s','z','\xc5\xa1','\xc5\xbe','h','n','l']
-##		'pt',
-##		'bb','bd','bf','bs','bh','bn','bl',
-##		'kt','ks',
-##		'gn',
-##		'sk','ss',
-##		'mp','mb',
-##		'nt','nd','ns',
-##		'\xc5\x8bk','\xc5\x8bg',
-##		'll']
-##	return cons[int(random.random()*len(cons))]
 
 def cons():
 	r = random.random()

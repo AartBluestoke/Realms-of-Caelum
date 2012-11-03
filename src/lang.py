@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+import os
 
 langs = {}
 curr = 'en_us' #by default. TODO: load from a config. (TODO: write a config, but we can reuse some of this script.)
@@ -9,6 +10,7 @@ def load(langname):
 	'''Loads a lang file.'''
 	global langs
 	langs[langname] = {}
+	print os.listdir('resources')
 	x = open('resources/lang/%s.lang' %langname)
 	y = 'spam'
 	while True:

@@ -7,20 +7,20 @@
 #Blank lines like this next one are okay. Just make sure they're ENTIRELY blank.
 #Feel free to add comments IF they take up the entire line. Comments cannot take the same line as an entry, and the hash (#) MUST be the first character in the line.
 
-gui.title	Þêi Cælûmen
-gui.version	Prototype
+gui.title	Þêi Cælumen
+gui.version	Biðigûžent
 gui.copyright	Copyright © 2012 Elusivehawk, LLC. and Pentachoron Labs. All rights reserved.
 
-gui.button.back	Back
-gui.button.cancel	Cancel
-gui.button.free	Free Play
-gui.button.new	New
-gui.button.options	Options
-gui.button.story	Story
+gui.button.back	ctôkešë
+gui.button.cancel	hîsušë
+gui.button.free	Váxa Fûsint
+gui.button.new	Váxa Uktâ
+gui.button.options	Oéldæ
+gui.button.story	Démbol
 
-gui.game.name	World Name
+gui.game.name	Gahánt Vax
 
-gui.options.lang	Language
+gui.options.lang	Kîenkuk
 
 #We may eliminate these. Don't translate these until we're sure we want these.
 stdout.boot	Booting up game

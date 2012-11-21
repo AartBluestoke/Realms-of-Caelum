@@ -1,3 +1,6 @@
 *.pyc
-/RocLauncher/*
-!/RocLauncher/src/
+/api/.metadata/*
+/api/RoCAPISrc/bin/*
+/api/RoCAPISrc/.settings/*
+/api/RoCAPISrc/.classpath
+/api/RoCAPISrc/.project

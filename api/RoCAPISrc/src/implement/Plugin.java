@@ -45,7 +45,7 @@ public @interface Plugin
 	 * 
 	 * @return The version of Realms of Caelum your plugin is intended for. Mismatch versions will still work, albeit with a warning.
 	 */
-	public String RoCVersion();
+	public String RoCVersion() default "";
 	
 	/**
 	 * 

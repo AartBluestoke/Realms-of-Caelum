@@ -33,29 +33,33 @@ public class RoCAPICore
 	{
 		Object plugin = this.buttonList.get(button);
 		
-		for (Method method : plugin.getClass().getMethods())
+		if (plugin != null)
 		{
-			for (Annotation annotation : method.getAnnotations())
+			for (Method method : plugin.getClass().getMethods())
 			{
-				if (annotation instanceof Plugin.OnButtonPush)
+				for (Annotation annotation : method.getAnnotations())
 				{
-					try
+					if (annotation instanceof Plugin.OnButtonPush)
 					{
-						method.invoke(plugin.getClass(), button);
-						return;
-					}
-					catch (IllegalArgumentException e)
-					{
-						ConsoleHelper.toConsole("The annotated method " + method.toGenericString() + " in " + plugin.toString() + " does not have the proper arguments. Full log:", Defcon.ERROR);
-						e.printStackTrace();
-					}
-					catch (IllegalAccessException e)
-					{
-						e.printStackTrace();
-					}
-					catch (InvocationTargetException e)
-					{
-						e.printStackTrace();
+						try
+						{
+							method.invoke(plugin.getClass(), button);
+							return;
+						}
+						catch (IllegalArgumentException e)
+						{
+							ConsoleHelper.toConsole("The annotated method " + method.toGenericString() + " in " + plugin.toString() + " does not have the proper arguments. Full log:", Defcon.ERROR);
+							e.printStackTrace();
+						}
+						catch (IllegalAccessException e)
+						{
+							e.printStackTrace();
+						}
+						catch (InvocationTargetException e)
+						{
+							e.printStackTrace();
+						}
+						
 					}
 					
 				}

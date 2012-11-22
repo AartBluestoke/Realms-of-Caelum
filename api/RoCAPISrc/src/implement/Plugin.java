@@ -49,20 +49,6 @@ public @interface Plugin
 	
 	/**
 	 * 
-	 * Used to easily register buttons for the Start Menu. NOTICE: One annotation per plugin.
-	 * 
-	 * @author Elusivehawk
-	 */
-	@Retention(RetentionPolicy.RUNTIME)
-	@Target(ElementType.FIELD)
-	public @interface StartMenuButtons
-	{
-		public boolean enable() default true;
-		
-	}
-	
-	/**
-	 * 
 	 * The annotation used for the loading method in your class file. NOTICE: One annotation per plugin.
 	 * 
 	 * @author Elusivehawk
@@ -70,5 +56,9 @@ public @interface Plugin
 	@Retention(RetentionPolicy.RUNTIME)
 	@Target(ElementType.METHOD)
 	public @interface Load{}
+	
+	@Retention(RetentionPolicy.RUNTIME)
+	@Target(ElementType.METHOD)
+	public @interface OnButtonPush{}
 	
 }

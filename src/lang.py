@@ -25,7 +25,7 @@ def load(langname):
 		if y[-1] == '\n': y = y[:-1]
 		if y[-1] == '\r': y = y[:-1]
 		key = y.split('\t')[0].replace('\\t','\t').replace('\\n','\n').replace('\\\\','\\')
-		text = y.split('\t')[1].replace('\\t','\t').replace('\\n','\n').replace('\\\\','\\')
+		text = unicode(y.split('\t')[1].replace('\\t','\t').replace('\\n','\n').replace('\\\\','\\'),'utf-8')
 		langs[langname][key] = text
 
 def lang(key):

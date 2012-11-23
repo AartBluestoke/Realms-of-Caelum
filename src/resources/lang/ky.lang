@@ -21,7 +21,3 @@ gui.button.story	Démbol
 gui.game.name	Gahánt Vax
 
 gui.options.lang	Kîenkuk
-
-#We may eliminate these. Don't translate these until we're sure we want these.
-stdout.boot	Booting up game
-stdout.bootdone	Done!

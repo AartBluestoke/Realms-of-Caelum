@@ -19,7 +19,6 @@ class window(ds.ShowBase):
 	'''Main window class, instantiated upon start of game. This class
 	starts the menu.'''
 	def __init__(self):
-		print lang('stdout.boot')
 		ds.ShowBase.__init__(self)
 		base.setBackgroundColor(0, 0, 0)
 		base.disableMouse()
@@ -29,7 +28,6 @@ class window(ds.ShowBase):
 		self.createmenus()
 		#Starts up title music.
 		self.bgmusic = base.loader.loadSfx('resources/sounds/Climactic cave.mp3')
-		print lang('stdout.bootdone')
 		self.openmain()
 		self.bgmusic.setLoop(True)
 		self.bgmusic.play()

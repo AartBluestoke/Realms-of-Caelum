@@ -7,21 +7,17 @@
 #Blank lines like this next one are okay. Just make sure they're ENTIRELY blank.
 #Feel free to add comments IF they take up the entire line. Comments cannot take the same line as an entry, and the hash (#) MUST be the first character in the line.
 
-gui.title	Realms of Cælum
-gui.version	Prototype
-gui.copyright	Copyright © 2012 Elusivehawk, LLC. and Pentachoron Labs. All rights reserved.
+gui.title	TERRA CÆLꟾ
+gui.version	ARCHETYPVS
+gui.copyright	© MMXII "ELVSIVEHAWK, LLC" ET "PENTACHORON LABS". IV́RÉS OMNIS SERVANTVR.
 
-gui.button.back	Back
-gui.button.cancel	Cancel
-gui.button.free	Free Play
-gui.button.new	New
-gui.button.options	Options
-gui.button.story	Story
+gui.button.back	REVERTE
+gui.button.cancel	REVERTE
+gui.button.free	LV́DVS LꟾBER
+gui.button.new	NOVVS
+gui.button.options	OPTIÓNÉS
+gui.button.story	FÁBVLA
 
-gui.game.name	World Name
+gui.game.name	NÓMEN MVNDꟾ
 
-gui.options.lang	Language
-
-#We may eliminate these. Don't translate these until we're sure we want these.
-stdout.boot	Booting up game
-stdout.bootdone	Done!
+gui.options.lang	LINGVA

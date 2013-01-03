@@ -1,6 +1,3 @@
 *.pyc
-/api/.metadata/*
-/api/RoCAPISrc/bin/*
-/api/RoCAPISrc/.settings/*
-/api/RoCAPISrc/.classpath
-/api/RoCAPISrc/.project
+/java/eclipse/.metadata
+/java/eclipse/RoC/bin/*

@@ -1,6 +1,10 @@
 
 package realmsofcaelum.core;
 
+import java.awt.Canvas;
+import java.awt.Dimension;
+import javax.swing.JFrame;
+
 /**
  * 
  * 
@@ -14,7 +18,9 @@ public class Start
 	 */
 	public static void main(String[] args)
 	{
-		
+		JFrame frame = new JFrame("Realms of Caelum");
+		Canvas canvas = new Canvas();
+		Dimension size = new Dimension(1280, 720); //TODO: add size to settings later
 	}
 	
 }

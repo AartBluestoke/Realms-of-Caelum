@@ -52,8 +52,9 @@ public abstract class Game
 	
 	protected abstract void initializeGame() throws Exception;
 	
-	public void startGame()
+	public boolean startGame()
 	{
+		boolean crashed = true;
 		try
 		{
 			log("Creating game thread");
@@ -67,7 +68,7 @@ public abstract class Game
 			}
 			dParent.getParent().setVisible(false);
 			log("Shutting down");
-			System.exit(0);
+			crashed = false;
 		}
 		catch (Exception e)
 		{
@@ -85,8 +86,8 @@ public abstract class Game
 				shutdownOpenGL();
 			}
 			catch (Exception ee) { }
-			System.exit(0);
 		}
+		return crashed;
 	}
 	
 	private void initializeOpenGL() throws Exception

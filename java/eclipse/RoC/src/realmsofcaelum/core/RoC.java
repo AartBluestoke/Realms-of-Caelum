@@ -5,6 +5,7 @@ import static org.lwjgl.opengl.GL11.*;
 import java.awt.Canvas;
 import java.awt.event.WindowEvent;
 import java.awt.event.WindowListener;
+
 import org.lwjgl.input.Keyboard;
 import com.briman0094.gameengine.Game;
 import com.briman0094.gameengine.render.TextRenderer;
@@ -67,7 +68,10 @@ public class RoC extends Game implements WindowListener
 		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 		
 		glColor4f(1f, 1f, 1f, 1f); // TODO: placeholder code :D
-		textRenderer.renderTextAt("FREAKIN TEXT!", 512, 350);
+		textRenderer.renderTextAt("Releams of Caelum",460, 280);
+		textRenderer.renderTextAt("Load Level", 517, 330);
+		textRenderer.renderTextAt("Multiplayer", 516, 380);
+		textRenderer.renderTextAt("Options", 550, 430);
 	}
 	
 	@Override

@@ -21,7 +21,7 @@ public class RoC extends Game implements WindowListener
 	public RoC(Canvas displayParent, String resourceDirectory)
 	{
 		super(displayParent, resourceDirectory);
-		this.initialized = false;
+		initialized = false;
 		keys = new boolean[Keyboard.KEYBOARD_SIZE];
 		lastKeys = new boolean[Keyboard.KEYBOARD_SIZE];
 		
@@ -30,12 +30,11 @@ public class RoC extends Game implements WindowListener
 	@Override
 	protected void tick() throws Exception
 	{
-		this.updateKeys();
+		updateKeys();
 		
 		if (getKey(Keyboard.KEY_ESCAPE))
 		{
-			this.stopGame();
-			
+			stopGame();
 		}
 		
 	}
@@ -58,7 +57,8 @@ public class RoC extends Game implements WindowListener
 	
 	public static boolean getKeyOnce(int key)
 	{
-		return (key < keys.length) ? keys[key] && !lastKeys[key] : false;
+		if (key < keys.length) return keys[key] && !lastKeys[key];
+		return false;
 	}
 	
 	@Override
@@ -66,71 +66,62 @@ public class RoC extends Game implements WindowListener
 	{
 		glClearColor(0f, 0f, 0f, 1f);
 		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+		
 		glColor4f(1f, 1f, 1f, 1f); // TODO: placeholder code :D
-		
-		this.textRenderer.renderTextAt("Releams of Caelum",460, 280);
-		this.textRenderer.renderTextAt("Load Level", 517, 330);
-		this.textRenderer.renderTextAt("Multiplayer", 516, 380);
-		this.textRenderer.renderTextAt("Options", 550, 430);
-		
+		textRenderer.renderTextAt("Releams of Caelum",460, 280);
+		textRenderer.renderTextAt("Load Level", 517, 330);
+		textRenderer.renderTextAt("Multiplayer", 516, 380);
+		textRenderer.renderTextAt("Options", 550, 430);
 	}
 	
 	@Override
 	protected void initializeGame() throws Exception
 	{
-		this.textureLibrary = new TextureLibrary();
-		this.textRenderer = new TextRenderer("mainFont", 256, 2);
+		textureLibrary = new TextureLibrary();
+		textRenderer = new TextRenderer("mainFont", 256, 2);
 		
 		glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
 		glEnable(GL_TEXTURE_2D);
 		glOrtho(0, 1280, 720, 0, 100f, -100f); // TODO: make these sizes not hard-coded!
 		glViewport(0, 0, 1280, 720);
 		
-		this.initialized = true;
-		
+		initialized = true;
 	}
 	
 	@Override
 	public void windowActivated(WindowEvent e)
 	{
-		
 	}
 	
 	@Override
 	public void windowClosed(WindowEvent e)
 	{
-		
 	}
 	
 	@Override
 	public void windowClosing(WindowEvent e)
 	{
-		this.stopGame();
-		
+		stopGame();
 	}
 	
 	@Override
 	public void windowDeactivated(WindowEvent e)
 	{
-		
 	}
 	
 	@Override
 	public void windowDeiconified(WindowEvent e)
 	{
-		
 	}
 	
 	@Override
 	public void windowIconified(WindowEvent e)
 	{
-		
 	}
 	
 	@Override
 	public void windowOpened(WindowEvent e)
 	{
-		
 	}
 	
 }

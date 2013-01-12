@@ -13,17 +13,16 @@ import javax.swing.JFrame;
  */
 public class Start
 {
-	/**
-	 * The game instance.
-	 */
 	private static RoC game;
 	
+	/**
+	 * @param args
+	 */
 	public static void main(String[] args)
 	{
 		JFrame frame = new JFrame("Realms of Caelum");
 		Canvas canvas = new Canvas();
 		Dimension size = new Dimension(1280, 720); //TODO add size to settings later
-		
 		canvas.setMinimumSize(size);
 		canvas.setMaximumSize(size);
 		canvas.setPreferredSize(size);
@@ -35,19 +34,15 @@ public class Start
 		game = new RoC(canvas, "realmsofcaelum/res/");
 		frame.addWindowListener(game);
 		canvas.requestFocus();
-		
 		if (!game.startGame())
 		{
 			System.exit(0);
-			
 		}
 		else
 		{
 			RoC.log("Game did not exit cleanly!");
 			System.exit(1);
-			
 		}
-		
 	}
 	
 }

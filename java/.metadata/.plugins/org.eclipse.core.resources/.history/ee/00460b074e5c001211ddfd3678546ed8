@@ -13,9 +13,6 @@ import javax.swing.JFrame;
  */
 public class Start
 {
-	/**
-	 * The game instance.
-	 */
 	private static RoC game;
 	
 	public static void main(String[] args)

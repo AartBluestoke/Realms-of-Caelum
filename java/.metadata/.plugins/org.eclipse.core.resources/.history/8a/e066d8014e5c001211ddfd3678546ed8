@@ -13,11 +13,11 @@ import javax.swing.JFrame;
  */
 public class Start
 {
-	/**
-	 * The game instance.
-	 */
 	private static RoC game;
 	
+	/**
+	 * @param args
+	 */
 	public static void main(String[] args)
 	{
 		JFrame frame = new JFrame("Realms of Caelum");

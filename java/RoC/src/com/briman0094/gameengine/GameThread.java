@@ -1,3 +1,4 @@
+
 package com.briman0094.gameengine;
 
 public class GameThread extends Thread
@@ -5,7 +6,7 @@ public class GameThread extends Thread
 	private Game game;
 	private boolean didEncounterError = false;
 	private Exception exception;
-
+	
 	public GameThread(Game game, String name)
 	{
 		super(name);
@@ -14,26 +15,31 @@ public class GameThread extends Thread
 	
 	public boolean didEncounterError()
 	{
-		return didEncounterError;
+		return this.didEncounterError;
 	}
 	
 	public Exception getException()
 	{
-		return exception;
+		return this.exception;
 	}
-
+	
 	@Override
 	public void run()
 	{
 		try
 		{
 			Game.log("Game thread sucessfully started");
-			game.run();
-		} catch (Exception e)
-		{
-			didEncounterError = true;
-			exception = e;
-			this.interrupt();
+			this.game.run();
+			
 		}
+		catch (Exception e)
+		{
+			this.didEncounterError = true;
+			this.exception = e;
+			this.interrupt();
+			
+		}
+		
 	}
+	
 }

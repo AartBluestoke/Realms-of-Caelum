@@ -1,25 +1,23 @@
+
 package com.briman0094.gameengine.render;
 
 import java.io.InputStream;
-
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
-
 import static org.lwjgl.opengl.GL11.*;
 import org.lwjgl.util.vector.Vector4f;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
-
 import com.briman0094.gameengine.Game;
 
 public class TextRenderer
 {
-	private Texture		font;
-	private Vector4f[]	charCoords;
-	private int			charOffset;
-	private int			padding;
+	private Texture	font;
+	private Vector4f[] charCoords;
+	private int	charOffset;
+	private int	padding;
 	
 	public TextRenderer(String fontName, int charCount, int padding) throws Exception
 	{
@@ -27,6 +25,7 @@ public class TextRenderer
 		charCoords = new Vector4f[charCount];
 		this.padding = padding;
 		loadMetrics("fonts/" + fontName + ".xml");
+		
 	}
 	
 	public void renderTextAt(String text, int x, int y)
@@ -34,40 +33,49 @@ public class TextRenderer
 		char[] chars = text.toCharArray();
 		int curX = x;
 		int key;
+		
 		for (char c : chars)
 		{
 			key = (int) c;
-			if (charCoords != null)
+			
+			if (this.charCoords != null)
 			{
-				if (key >= 0 && key < charCoords.length)
+				if (key >= 0 && key < this.charCoords.length)
 				{
-					Vector4f charLoc = charCoords[key];
+					Vector4f charLoc = this.charCoords[key];
 					if (charLoc != null)
 					{
 						renderCharacterAt(charLoc, curX, y);
 						curX += charLoc.z; // add width of character
-						curX += padding;
+						curX += this.padding;
+						
 					}
 					else
 					{
 						Game.log("Invalid character encountered while rendering!");
+						
 					}
+					
 				}
 				else
 				{
 					Game.log("Invalid character encountered while rendering!");
+					
 				}
+				
 			}
 			else
 			{
 				Game.log("A strange error occurred while rendering! Font renderer not initialized!");
+				
 			}
+			
 		}
+		
 	}
 	
 	private void renderCharacterAt(Vector4f charLoc, int x, int y)
 	{
-		
 		int pxX = (int) charLoc.x;
 		int pxY = (int) charLoc.y;
 		int pxW = (int) charLoc.z;
@@ -79,26 +87,27 @@ public class TextRenderer
 		
 		glPushMatrix();
 		glTranslatef(x, y, 0);
-		{
-			font.bindTexture();
-			glEnable(GL_TEXTURE_2D);
-			glBegin(GL_QUADS);
-			{
-				glTexCoord2f(tcX, tcY);
-				glVertex2i(0, 0);
-				
-				glTexCoord2f(tcX + tcW, tcY);
-				glVertex2i(pxW, 0);
-				
-				glTexCoord2f(tcX + tcW, tcY + tcH);
-				glVertex2i(pxW, pxH);
-				
-				glTexCoord2f(tcX, tcY + tcH);
-				glVertex2i(0, pxH);
-			}
-			glEnd();
-		}
+		this.font.bindTexture();
+		
+		glEnable(GL_TEXTURE_2D);
+		glBegin(GL_QUADS);
+		
+		glTexCoord2f(tcX, tcY);
+		glVertex2i(0, 0);
+		
+		glTexCoord2f(tcX + tcW, tcY);
+		glVertex2i(pxW, 0);
+		
+		glTexCoord2f(tcX + tcW, tcY + tcH);
+		glVertex2i(pxW, pxH);
+		
+		glTexCoord2f(tcX, tcY + tcH);
+		glVertex2i(0, pxH);
+		
+		glEnd();
+		
 		glPopMatrix();
+		
 	}
 	
 	private void loadMetrics(String filename) throws Exception
@@ -115,6 +124,7 @@ public class TextRenderer
 			int w, h;
 			Node node;
 			Element character;
+			
 			for (int chr = 0; chr < characters.getLength(); chr++)
 			{
 				node = characters.item(chr);
@@ -126,17 +136,23 @@ public class TextRenderer
 					y = Integer.parseInt(getTagValue("y", character));
 					w = Integer.parseInt(getTagValue("width", character));
 					h = Integer.parseInt(getTagValue("height", character));
-					if (key >= 0 && key < charCoords.length && charCoords != null)
+					if (key >= 0 && key < this.charCoords.length && this.charCoords != null)
 					{
-						charCoords[key] = new Vector4f(x, y, w, h);
+						this.charCoords[key] = new Vector4f(x, y, w, h);
+						
 					}
+					
 				}
 				catch (Exception ex)
 				{
 					Game.log("XML parse error: invalid key for character at " + chr);
+					
 				}
+				
 			}
+			
 		}
+		
 	}
 	
 	private String getTagValue(String tagName, Element element)
@@ -145,4 +161,5 @@ public class TextRenderer
 		Node node = (Node) nodes.item(0);
 		return node.getNodeValue();
 	}
+	
 }

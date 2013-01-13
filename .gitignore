@@ -1,2 +1,3 @@
 *.pyc
+/java/.metadata/.plugins/*
 /java/eclipse/RoC/bin/*

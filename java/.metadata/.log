@@ -157,3 +157,35 @@ Java Model Exception: Java Model Status [Timed out while retrieving the attached
 
 !ENTRY org.eclipse.m2e.logback.appender 4 0 2013-01-11 16:23:47.736
 !MESSAGE Failed to open search index.
+!SESSION 2013-01-11 16:33:52.297 -----------------------------------------------
+eclipse.buildId=I20120608-1400
+java.version=1.6.0_26
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2013-01-11 16:35:35.859
+!MESSAGE Failed to open search index.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2013-01-11 16:36:57.906
+!MESSAGE 'remote-models (http://download.eclipse.org/recommenders/models/juno/, releases+snapshots)' did not send ETAG header for 'org.eclipse.recommenders:index:pom:0.0.0'.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2013-01-11 16:36:57.918
+!MESSAGE Failed to open search index.
+!SESSION 2013-01-12 16:46:17.436 -----------------------------------------------
+eclipse.buildId=I20120608-1400
+java.version=1.6.0_26
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2013-01-12 16:47:33.484
+!MESSAGE Failed to open search index.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2013-01-12 16:47:33.749
+!MESSAGE 'remote-models (http://download.eclipse.org/recommenders/models/juno/, releases+snapshots)' did not send ETAG header for 'org.eclipse.recommenders:index:pom:0.0.0'.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2013-01-12 16:47:33.763
+!MESSAGE Failed to open search index.

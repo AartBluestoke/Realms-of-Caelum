@@ -1,11 +1,23 @@
 
 package realmsofcaelum.core;
 
-import static org.lwjgl.opengl.GL11.*;
+import static org.lwjgl.opengl.GL11.GL_COLOR_BUFFER_BIT;
+import static org.lwjgl.opengl.GL11.GL_DEPTH_BUFFER_BIT;
+import static org.lwjgl.opengl.GL11.GL_ONE_MINUS_SRC_ALPHA;
+import static org.lwjgl.opengl.GL11.GL_SRC_ALPHA;
+import static org.lwjgl.opengl.GL11.GL_TEXTURE_2D;
+import static org.lwjgl.opengl.GL11.glBlendFunc;
+import static org.lwjgl.opengl.GL11.glClear;
+import static org.lwjgl.opengl.GL11.glClearColor;
+import static org.lwjgl.opengl.GL11.glEnable;
+import static org.lwjgl.opengl.GL11.glOrtho;
+import static org.lwjgl.opengl.GL11.glViewport;
 import java.awt.Canvas;
 import java.awt.event.WindowEvent;
 import java.awt.event.WindowListener;
 import org.lwjgl.input.Keyboard;
+import realmsofcaelum.scenes.IScene;
+import realmsofcaelum.scenes.SceneMainMenu;
 import com.briman0094.gameengine.Game;
 import com.briman0094.gameengine.render.TextRenderer;
 import com.briman0094.gameengine.render.TextureLibrary;
@@ -13,10 +25,11 @@ import com.briman0094.gameengine.render.TextureLibrary;
 public class RoC extends Game implements WindowListener
 {
 	private TextureLibrary textureLibrary;
-	private TextRenderer textRenderer;
+	public TextRenderer textRenderer;
 	private boolean initialized;
-	public static boolean[] keys;
-	public static boolean[] lastKeys;
+	private static boolean[] keys;
+	private static boolean[] lastKeys;
+	private IScene currentScene;
 	
 	public RoC(Canvas displayParent, String resourceDirectory)
 	{
@@ -24,20 +37,6 @@ public class RoC extends Game implements WindowListener
 		this.initialized = false;
 		keys = new boolean[Keyboard.KEYBOARD_SIZE];
 		lastKeys = new boolean[Keyboard.KEYBOARD_SIZE];
-		
-	}
-	
-	@Override
-	protected void tick() throws Exception
-	{
-		this.updateKeys();
-		
-		if (getKey(Keyboard.KEY_ESCAPE))
-		{
-			this.stopGame();
-			
-		}
-		
 	}
 	
 	private void updateKeys()
@@ -46,7 +45,6 @@ public class RoC extends Game implements WindowListener
 		{
 			lastKeys[key] = keys[key];
 			keys[key] = Keyboard.isKeyDown(key);
-			
 		}
 		
 	}
@@ -62,17 +60,27 @@ public class RoC extends Game implements WindowListener
 	}
 	
 	@Override
+	protected void tick() throws Exception
+	{
+		this.updateKeys();
+		
+		if (getKey(Keyboard.KEY_ESCAPE))
+		{
+			this.stopGame();
+		}
+		
+		if (this.currentScene != null)
+			this.currentScene.tick();
+	}
+	
+	@Override
 	protected void render() throws Exception
 	{
 		glClearColor(0f, 0f, 0f, 1f);
 		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-		glColor4f(1f, 1f, 1f, 1f); // TODO: placeholder code :D
 		
-		this.textRenderer.renderTextAt("Releams of Caelum",460, 280);
-		this.textRenderer.renderTextAt("Load Level", 517, 330);
-		this.textRenderer.renderTextAt("Multiplayer", 516, 380);
-		this.textRenderer.renderTextAt("Options", 550, 430);
-		
+		if (this.currentScene != null)
+			this.currentScene.render();
 	}
 	
 	@Override
@@ -86,33 +94,45 @@ public class RoC extends Game implements WindowListener
 		glOrtho(0, 1280, 720, 0, 100f, -100f); // TODO: make these sizes not hard-coded!
 		glViewport(0, 0, 1280, 720);
 		
-		this.initialized = true;
+		this.currentScene = new SceneMainMenu(this);
 		
+		this.initialized = true;
 	}
 	
 	@Override
-	public void windowActivated(WindowEvent e){}
+	public void windowActivated(WindowEvent e)
+	{
+	}
 	
 	@Override
-	public void windowClosed(WindowEvent e){}
+	public void windowClosed(WindowEvent e)
+	{
+	}
 	
 	@Override
 	public void windowClosing(WindowEvent e)
 	{
 		this.stopGame();
-		
 	}
 	
 	@Override
-	public void windowDeactivated(WindowEvent e){}
+	public void windowDeactivated(WindowEvent e)
+	{
+	}
 	
 	@Override
-	public void windowDeiconified(WindowEvent e){}
+	public void windowDeiconified(WindowEvent e)
+	{
+	}
 	
 	@Override
-	public void windowIconified(WindowEvent e){}
+	public void windowIconified(WindowEvent e)
+	{
+	}
 	
 	@Override
-	public void windowOpened(WindowEvent e){}
+	public void windowOpened(WindowEvent e)
+	{
+	}
 	
 }

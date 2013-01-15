@@ -39,13 +39,11 @@ public class Start
 		if (!game.startGame())
 		{
 			System.exit(0);
-			
 		}
 		else
 		{
 			RoC.log("Game did not exit cleanly!");
 			System.exit(1);
-			
 		}
 		
 	}

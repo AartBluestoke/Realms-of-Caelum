@@ -14,7 +14,7 @@
 <setting id="org.eclipse.jdt.core.formatter.insert_new_line_in_empty_annotation_declaration" value="insert"/>
 <setting id="org.eclipse.jdt.core.formatter.insert_new_line_before_closing_brace_in_array_initializer" value="do not insert"/>
 <setting id="org.eclipse.jdt.core.formatter.insert_space_after_opening_paren_in_annotation" value="do not insert"/>
-<setting id="org.eclipse.jdt.core.formatter.blank_lines_before_field" value="1"/>
+<setting id="org.eclipse.jdt.core.formatter.blank_lines_before_field" value="0"/>
 <setting id="org.eclipse.jdt.core.formatter.insert_space_after_opening_paren_in_while" value="do not insert"/>
 <setting id="org.eclipse.jdt.core.formatter.use_on_off_tags" value="false"/>
 <setting id="org.eclipse.jdt.core.formatter.insert_space_between_empty_parens_in_annotation_type_member_declaration" value="do not insert"/>
@@ -45,7 +45,7 @@
 <setting id="org.eclipse.jdt.core.formatter.alignment_for_arguments_in_method_invocation" value="16"/>
 <setting id="org.eclipse.jdt.core.formatter.insert_space_before_closing_angle_bracket_in_type_arguments" value="do not insert"/>
 <setting id="org.eclipse.jdt.core.formatter.insert_space_before_comma_in_superinterfaces" value="do not insert"/>
-<setting id="org.eclipse.jdt.core.formatter.blank_lines_before_new_chunk" value="1"/>
+<setting id="org.eclipse.jdt.core.formatter.blank_lines_before_new_chunk" value="0"/>
 <setting id="org.eclipse.jdt.core.formatter.insert_space_before_binary_operator" value="insert"/>
 <setting id="org.eclipse.jdt.core.formatter.blank_lines_before_package" value="1"/>
 <setting id="org.eclipse.jdt.core.compiler.source" value="1.7"/>
@@ -136,8 +136,8 @@
 <setting id="org.eclipse.jdt.core.formatter.format_line_comment_starting_on_first_column" value="true"/>
 <setting id="org.eclipse.jdt.core.formatter.insert_space_before_closing_bracket_in_array_reference" value="do not insert"/>
 <setting id="org.eclipse.jdt.core.formatter.insert_new_line_after_annotation_on_field" value="insert"/>
-<setting id="org.eclipse.jdt.core.formatter.brace_position_for_enum_constant" value="next_line"/>
 <setting id="org.eclipse.jdt.core.formatter.comment.indent_root_tags" value="true"/>
+<setting id="org.eclipse.jdt.core.formatter.brace_position_for_enum_constant" value="next_line"/>
 <setting id="org.eclipse.jdt.core.formatter.insert_space_before_comma_in_enum_declarations" value="do not insert"/>
 <setting id="org.eclipse.jdt.core.formatter.alignment_for_union_type_in_multicatch" value="16"/>
 <setting id="org.eclipse.jdt.core.formatter.insert_space_after_comma_in_explicitconstructorcall_arguments" value="insert"/>
@@ -205,7 +205,7 @@
 <setting id="org.eclipse.jdt.core.formatter.insert_new_line_before_while_in_do_statement" value="insert"/>
 <setting id="org.eclipse.jdt.core.formatter.alignment_for_arguments_in_enum_constant" value="16"/>
 <setting id="org.eclipse.jdt.core.formatter.comment.format_javadoc_comments" value="true"/>
-<setting id="org.eclipse.jdt.core.formatter.comment.line_length" value="80"/>
+<setting id="org.eclipse.jdt.core.formatter.comment.line_length" value="9999"/>
 <setting id="org.eclipse.jdt.core.formatter.insert_new_line_after_annotation_on_package" value="insert"/>
 <setting id="org.eclipse.jdt.core.formatter.blank_lines_between_import_groups" value="0"/>
 <setting id="org.eclipse.jdt.core.formatter.insert_space_before_comma_in_enum_constant_arguments" value="do not insert"/>

@@ -1,3 +1,5 @@
+*.class
 *.pyc
 /java/.metadata/.plugins/*
+/java/.metadata/.mylyn/*
 /java/eclipse/RoC/bin/*
